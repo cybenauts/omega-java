@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#d1").fadeToggle(200);
+			$("#d2").fadeToggle(400);
+			$("#d3").fadeToggle(600);
+			$("#d4").fadeToggle(800);
+		});
+	});
+</script>
+</head>
+
+<body>
+<button>Toggle</button><br><br>
+
+<div id="d1" style="height: 50px;width: 50px;background-color: red;">
+	
+</div><br>
+<div id="d2" style="height: 50px;width: 50px;background-color: blue;">
+	
+</div><br>
+<div id="d3" style="height: 50px;width: 50px;background-color: green;">
+	
+</div><br>
+<div id="d4" style="height: 50px;width: 50px;background-color: yellow;">
+
+</div><br>
+
+</body>
+</html>

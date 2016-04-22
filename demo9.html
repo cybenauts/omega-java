@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+			 $(".ip").focus(function(){
+			 	$(this).css("background-color","#d9ffcc");
+			 });
+			  $(".ip").blur(function(){
+			 	$(this).css("background-color","#ffffcc");
+			 });
+			  $("form").submit(function () {
+			  	 alert("Submission");
+			  });
+			  $("#sel").change(function () {
+			  	 $("#msg").val("Not a Fanboy!!!");
+			  });
+		});
+	</script>
+</head>
+<body>
+	<form>
+	<label>Firstname</label>
+	<input type="text" class="ip" style="background-color:#ffffcc "/><br><br>
+	<label>Lastname</label>
+	<input type="text" class="ip"  style="background-color:#ffffcc "/><br><br>
+	<select id="sel">
+		<option value="Apple" selected>Apple</option>
+		<option value="Samsung">Samsung</option>
+		<option value="Windows">Windows</option>
+	</select>
+	<input id="msg" type="text" value=""  disabled style="width: 100px">
+	<input type="submit" name="" value="Enter">
+	</form>
+</body>
+</html>

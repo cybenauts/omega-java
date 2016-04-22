@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".inp").focus(function () {
+				 $(this).css("background-color","#ffffff");
+			});
+			$(".inp").blur(function () {
+				 $(this).css("background-color","#e6e6e6");
+			});
+			$("#i2").blur(function () {
+				var c=$("#i2").val().length;
+			if(c<3) {
+				$("#notify").text("name should be more than 3 letters.");
+			}
+			else{
+				$("#notify").text("");
+			}	  
+			});
+
+			$("#i3").blur(function () {
+				 if($(this).val().length < 6)
+				 {
+				 	$("#notify1").text("more than 6");
+				 }
+			});
+			$("#i4").blur(function () {
+				 if($("#i3").val() != $("#i4").val())
+				 {
+				 	$("#notify2").text("password mismatch");	
+				 }
+			});
+			
+			$("#state").change(function () {
+				alert("scscsd");
+			});
+		});
+	</script>
+	<style type="text/css">
+		.inp{
+			background-color: #e6e6e6;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label>email</label><input type="text" id="i1" class="inp" /><br>
+		<label>name</label><input type="text"id="i2"class="inp"/>
+		<h6 id="notify"></h6>
+		<label>password</label><input type="text"id="i3"class="inp"/>
+		<h6 id="notify1"></h6>
+		<label>re-enter password</label><input type="text"id="i4"class="inp"/> 
+		<h6 id="notify2"></h6><br>
+		<label>address</label><br>
+		<label>State</label>
+		<select id="state">
+		<option value="up" selected>Uttar Pradesh</option>
+		<option value="mp">Madhya Pradesh</option>
+		<option value="mh">Maharashtra</option>
+		<option value="tn">Tamil Nadu</option>
+	</select>
+	<label>City</label>
+		<select id="city">
+		<option value="no" selected>Noida</option>
+		<option value="jh">Jhansi</option>
+		<option value="me">Meerut</option>
+		<option value="lu">Lucknow</option>
+	</select><br>
+
+	</form>
+</body>
+</html>

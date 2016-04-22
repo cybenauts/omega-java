@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("h2").hide(1000);
+			});
+			$("#show").click(function(){
+				$("h2").show(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+<h2>Now You See Me!</h2>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+</html>

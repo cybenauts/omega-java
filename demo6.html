@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function (argument) {
+			$("#d1").mouseenter(function(){
+				$("#d2").slideToggle("slow");
+			});
+			$("#d1").mouseleave(function(){
+				$("#d2").slideToggle("slow");
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="d1" style="height: 100px;background-color: green">
+	Sliding
+</div>
+<div id="d2" style="height:200px;background-color: yellow;display: none;">
+Toggle Sliding
+</div>
+</body>
+</html>

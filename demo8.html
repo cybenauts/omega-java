@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#ip").keypress(function(){
+				alert("Keypressed");
+			});
+		});
+	</script>
+</head>
+<body>
+<input id="ip" type="text" />
+<button>Check</button>
+</body>
+</html>
